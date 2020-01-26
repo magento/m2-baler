@@ -13,7 +13,7 @@
                     <label>Enable JavaScript bundling with Baler</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>
-                        <![CDATA[<strong style="color:red">Warning!</strong> Be sure that you have your theme bundles config]]>
+                        <![CDATA[<strong style="color:red">Warning!</strong> Be sure that you have your theme baler assets: core-bundle.js & requirejs-bundle-config.js]]>
                     </comment>
                 </field>
             </group>
