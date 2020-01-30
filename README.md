@@ -55,4 +55,4 @@ to `requires` section. So it looks like:
 ### How to start with Baler
 [Getting started with the alpha](https://github.com/magento/baler/blob/master/docs/ALPHA.md)
 
-If you found a bug in this module, please [open a new issue](https://github.com/magento/m2-baler/issues/new)
+If you found a bug in this module, please [open a new issue](https://github.com/magento/m2-baler/issues/new) or refer to [Code Of Conduct](.github/CODE_OF_CONDUCT.md).
