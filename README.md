@@ -14,43 +14,25 @@ Developer settings is not displayed in production mode. To enable this feature i
 ### How to install module
 
 #### Using Git
-1. Clone repository: `git clone https://github.com/adifucan/m2-baler.git`
-2. Rename cloned `m2-baler` directory into `Baler` and place this directory into `app/code/Magento` directory
-3. Run `bin/magento setup:upgrade`
+
+```bash
+mkdir app/code/Magento
+git clone https://github.com/adifucan/m2-baler.git app/code/Magento/Baler
+bin/magento setup:upgrade
+```
 
 #### Using Composer
-1. Add `"magento/module-baler": "dev-master"` to `require` section of `composer.json`  
-So, your `require` section looks like:
+
+Open you `composer.json` and change `"minimum-stability": "stable"` to `"minimum-stability": "dev"` and add `"prefer-stable": true`.
+
+This means that composer will always use stable package unless there is one. If there is no stable package it will use dev version, then run:
+
 ````
-    "require": {
-        "magento/product-community-edition": "2.3.3",
-        "magento/module-baler": "dev-master"
-    },
+composer config repositories.magento-baler vcs git@github.com:magento/m2-baler.git
+composer require magento/module-baler:dev-master
+bin/magento module:enable Magento_Baler
+bin/magento setup:upgrade
 ````
-2. Change `"minimum-stability": "stable"` to `"minimum-stability": "dev"` and add `"prefer-stable": true`  
-This means that composer will always use stable package unless there is one. If there is no stable package it will use dev version.
-3. Add
-````
-{
-    "type": "git",
-    "url": "https://github.com/adifucan/m2-baler.git"
-}
-````
-to `requires` section. So it looks like:
-````
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://repo.magento.com/"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/adifucan/m2-baler.git"
-        }
-    ],
-````
-4. Run `composer update`
-5. `magento/module-baler` should be created in `vendor` folder.
 
 ### How to start with Baler
 [Getting started with the alpha](https://github.com/magento/baler/blob/master/docs/ALPHA.md)
