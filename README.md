@@ -17,7 +17,7 @@ Developer settings is not displayed in production mode. To enable this feature i
 
 ```bash
 mkdir app/code/Magento
-git clone https://github.com/adifucan/m2-baler.git app/code/Magento/Baler
+git clone https://github.com/magento/m2-baler.git app/code/Magento/Baler
 bin/magento setup:upgrade
 ```
 
@@ -33,6 +33,23 @@ composer require magento/module-baler:dev-master
 bin/magento module:enable Magento_Baler
 bin/magento setup:upgrade
 ````
+
+#### Using Composer package at `repo.magento.com`
+
+This module is available as alpha composer package on `repo.magento.com`. This package works both with 2.3.x and 2.4.x Magento releases.
+
+Steps to install it:
+1. Add `"magento/module-baler": "1.0.0-alpha"` to `require` section of `composer.json`  
+   So, `require` section looks like:
+   ````
+       "require": {
+           "magento/product-community-edition": "2.3.4",
+           "magento/module-baler": "1.0.0-alpha"
+       },
+   ````
+2. Run `composer update` command.
+3. `bin/magento module:enable Magento_Baler`
+4. `bin/magento setup:upgrade`
 
 ### How to start with Baler
 [Getting started with the alpha](https://github.com/magento/baler/blob/master/docs/ALPHA.md)
