@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Magento\Baler\Plugin;
+namespace Ironman\Baler\Plugin;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\ScopeInterface;

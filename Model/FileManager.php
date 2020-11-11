@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Magento\Baler\Model;
+namespace Ironman\Baler\Model;
 
 use Magento\Framework\View\Asset\File\FallbackContext as FileFallbackContext;
 use Magento\Framework\View\Asset\Repository as AssetRepository;
